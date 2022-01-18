@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+        color: seagreen;
+    }
+    table{
+        margin: auto;
+    }
+</style>
+<body>
+    <h2>Đăng ký du lịch</h2>
+    <form action="" id="form">
+        <table border="1" style="background-color:springgreen;color:darkgreen; ">
+            <tr>
+                <td>Họ và tên</td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td>
+                    <input type="text"name="address">
+                </td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td>
+                    <input type="number" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td>
+                    <input type="checkbox" name="">
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select name="address" id="">
+                        <optgroup label="Miền bắc">
+                            <option value="">Nha Trang- Đà Lạt</option>
+                            <option value="">Buôn Mê Thuột- Gia Lai- Kontum</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" value="planes" name="vehicle" checked> Máy bay 
+                    <input type="radio" value="car" name="vehicle"> Ô tô
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="350px" height="55px" align="center">
+                    <fieldset >
+                        <legend>Chọn sản phẩm tham gia</legend>
+                        <label for="" >Người lớn</label>
+                        <input type="text" name="nguoilon" style="width:20px;" >
+                        <label for="">Trẻ em</label>
+                        <input type="text" name="treem" style="width:20px;">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea id="note" style="width:300px;" ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button onclick="login()" type="button">Đăng nhập</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" height="20px">
+                    <p id="notifications" style="display: none;">Bạn đã đăng ký thành công!</p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var notifi = document.querySelector("#notifications");
+      function login(){
+          notifi.style.color="red";
+          notifi.style.display="block";
+          notifi.style.height="20px";
+      }
+    </script>
+</body>
+</html>
